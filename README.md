@@ -75,26 +75,6 @@ python [evaluate.py](http://_vscodecontentref_/5)
 ```
 
 
-
-## Project Structure
-emotionDetectionFromVoice/
-│
-├── data/                     # Dataset folder
-├── [main.py](http://_vscodecontentref_/6)                   # Main script for training
-├── [evaluate.py](http://_vscodecontentref_/7)               # Script for testing the model with new audio
-├── [Visualize.py](http://_vscodecontentref_/8)              # Script for visualizing confusion matrix and training graphs
-├── [data_preprocessing.py](http://_vscodecontentref_/9)     # Data preprocessing module
-├── [model.py](http://_vscodecontentref_/10)                  # Model creation and training module
-├── result/                   # Directory for saved models and results
-│   ├── model.h5              # Trained model
-│   ├── history.npy           # Training history
-│   ├── label_classes.npy     # Label encoder classes
-├── requirements.txt          # Python dependencies
-├── [README.md](http://_vscodecontentref_/11)                 # Project documentation
-└── .gitignore                # Git ignore file
-
-
-
 ## Dependencies
 - librosa
 - numpy
