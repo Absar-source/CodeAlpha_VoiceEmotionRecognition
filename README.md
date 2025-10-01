@@ -48,7 +48,7 @@ Install Dependencies
 pip install -r requirements.txt
 ```
 
-Usage
+## Usage
 1. Preprocess the Dataset
 Place your .wav files in the data/ directory. The dataset should follow the RAVDESS naming convention.
 
@@ -76,7 +76,7 @@ python [evaluate.py](http://_vscodecontentref_/5)
 
 
 
-##Project Structure
+## Project Structure
 emotionDetectionFromVoice/
 │
 ├── data/                     # Dataset folder
@@ -95,7 +95,7 @@ emotionDetectionFromVoice/
 
 
 
-##Dependencies
+## Dependencies
 - librosa
 - numpy
 - matplotlib
@@ -108,7 +108,7 @@ Install all dependencies using:
 pip install -r requirements.txt
 ```
 
-##References
+## References
 -  RAVDESS Dataset
 -  Librosa Documentation
 
