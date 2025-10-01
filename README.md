@@ -35,14 +35,14 @@ This project uses **Convolutional Neural Networks (CNNs)** to detect emotions fr
 ```bash
 git clone https://github.com/your-username/emotion-detection-from-voice.git
 cd emotion-detection-from-voice
+```
 
-Set Up Virtual Environment
-
+###Set Up Virtual Environment
+```bash
 python -m venv .venv
 [activate](http://_vscodecontentref_/1)  # On Windows
 # source .venv/bin/activate  # On Linux/Mac
-'''
-
+```
 Install Dependencies
 '''bash
 pip install -r requirements.txt
