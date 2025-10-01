@@ -14,11 +14,13 @@ This project uses **Convolutional Neural Networks (CNNs)** to detect emotions fr
 ### Model Performance
 - **Test Accuracy**: ~92%
 - **Confusion Matrix**:
-  ![Confusion Matrix](docs/confusion_matrix.png) *(Replace with your actual image)*
+  ![Confusion Matrix](results/confusion_graph.jpg)
 
-### Example Prediction
-For the audio file `03-01-01-01-01-01-01.wav`, the model predicts:
-Predicted emotion: neutral
+- **Accuracy and Loss Graphs**:
+  - **Accuracy**:
+    ![Accuracy Graph](results/emotion_accuracy.jpg)
+  - **Loss**:
+    ![Loss Graph](results/emotion_loss.jpg)
 
 
 ---
