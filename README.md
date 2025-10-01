@@ -41,10 +41,12 @@ Set Up Virtual Environment
 python -m venv .venv
 [activate](http://_vscodecontentref_/1)  # On Windows
 # source .venv/bin/activate  # On Linux/Mac
+'''
 
 Install Dependencies
+'''bash
 pip install -r requirements.txt
-
+'''
 
 Usage
 1. Preprocess the Dataset
