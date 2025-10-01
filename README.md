@@ -44,41 +44,58 @@ python -m venv .venv
 # source .venv/bin/activate  # On Linux/Mac
 ```
 Install Dependencies
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
 
 Usage
 1. Preprocess the Dataset
 Place your .wav files in the data/ directory. The dataset should follow the RAVDESS naming convention.
 
 2. Train the Model
-Run the main.ipynb notebook to preprocess the data, train the model, and evaluate its performance.
+Run the main.py script to preprocess the data, train the model, and save the results:
 
-3. Test with New Audio
-Use the following code snippet to test the model with a new .wav file:
-
-y_new, sr_new = librosa.load("path_to_audio.wav", sr=sr)
-mfcc_new = librosa.feature.mfcc(y=y_new, sr=sr_new, n_mfcc=40)
-mfcc_new_std = standarize([mfcc_new], max_len=300)
-mfcc_new_std = mfcc_new_std.reshape(1, 40, 300, 1)
-pred = model.predict(mfcc_new_std)
-pred_label = le.inverse_transform([np.argmax(pred, axis=1)[0]])[0]
-print("Predicted emotion:", pred_label)
+```bash
+python [main.py](http://_vscodecontentref_/3)
+```
 
 
-Project Structure
+3. Visualize Results
+Run the Visualize.py script to generate the confusion matrix and accuracy/loss graphs:
+
+```bash
+python [Visualize.py](http://_vscodecontentref_/4)
+```
+
+4. Test with New Audio
+Use the evaluate.py script to test the model with a new .wav file:
+
+```bash
+python [evaluate.py](http://_vscodecontentref_/5)
+```
+
+
+
+##Project Structure
 emotionDetectionFromVoice/
 │
 ├── data/                     # Dataset folder
-├── [main.ipynb](http://_vscodecontentref_/2)                # Main notebook for training and evaluation
-├── mfcc_plot.ipynb           # Notebook for MFCC visualization
-├── emotion_model_92.h5       # Trained model
+├── [main.py](http://_vscodecontentref_/6)                   # Main script for training
+├── [evaluate.py](http://_vscodecontentref_/7)               # Script for testing the model with new audio
+├── [Visualize.py](http://_vscodecontentref_/8)              # Script for visualizing confusion matrix and training graphs
+├── [data_preprocessing.py](http://_vscodecontentref_/9)     # Data preprocessing module
+├── [model.py](http://_vscodecontentref_/10)                  # Model creation and training module
+├── result/                   # Directory for saved models and results
+│   ├── model.h5              # Trained model
+│   ├── history.npy           # Training history
+│   ├── label_classes.npy     # Label encoder classes
 ├── requirements.txt          # Python dependencies
-├── [README.md](http://_vscodecontentref_/3)                 # Project documentation
+├── [README.md](http://_vscodecontentref_/11)                 # Project documentation
 └── .gitignore                # Git ignore file
 
-Dependencies
+
+
+##Dependencies
 - librosa
 - numpy
 - matplotlib
@@ -87,11 +104,11 @@ Dependencies
 - tensorflow
 - tqdm
 Install all dependencies using:
-'''batch 
+```bash 
 pip install -r requirements.txt
+```
 
-
-References
+##References
 -  RAVDESS Dataset
 -  Librosa Documentation
 
